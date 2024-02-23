@@ -1,11 +1,11 @@
 import torch
 import torch.nn as mm
 
-class AtariNet(nn.Module):
+class Net(nn.Module):
 
     def __init__(self, nb_actions=4):
 
-        super(AtariNet, self).__init__()
+        super(Net, self).__init__()
         self.relu = nn.ReLU()
         self.conv1 = nn.Conv2d(1, 32, kernel_size=(8, 8), stride=(4, 4))
         self.conv2 = nn.Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2))
